@@ -1348,17 +1348,7 @@
         jvLsAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAARNJREFUaEPt
-        1U1KxEAQhuEM/mz1AKLgdcSF4E7RgznqbUQQLzCD3sON8a1K2YhJB6sXQuB74GPo6qKKgUymExERERER
-        EZHl6/v+gJzaZ5Rm0bciJ5FVlGfZbPLnHSkMPSSP5IMY+1yT6jLuzsmWfNuQs7ge4S69I4VB++SVTHkh
-        e9FaULskn9bwi9Uuoq2glt6RxpBbH1d3Ha2Osz1O734zbRutBbXUjiYMuR9mVd1Fq+N8PJRnHUW745za
-        0YQhD8OsqnW0Os4tXyS1owlDboZZVVfR6jjbo/XmN9M20VpQS+1owpBd8uzjxp7ITrQW1OyNVfuxj95c
-        1NI7mjBo+a/fn2woWe4fooiIiIiIiIj8s677AsqdOb0yTfvsAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="directoryButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAhZJREFUaEPt
         mbFLHEEUh89GRcR0KVQUDq5OFwsJFlEQhLOwS7TPnxFS2cQgpAjYWQoRVLQRA0FELSwOzlaxMk0IJEU0
@@ -1373,7 +1363,7 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="informationButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAUZJREFUaEPt
         mcFKw2AQhKPUi9pHKqj4AoJPIh4LvfYZLBU96dmrlp68+STSntqTCuksO/ZY/maDu4b9YKBsmMkOIaQk
@@ -1384,7 +1374,7 @@
         vFy7g16dJOe2fQxNkiQJRlVtAGXLU04O0ir6AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="licenseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAixJREFUaEPt
         mr1LHEEYh494CWJlipjOQtFSDEIai8v/YCGIWCqciEoKUcHSSrFIldbGgFgIVgpa2Ij4UWgnahlSqNgc
@@ -1399,7 +1389,7 @@
         3/RTZ4pfMpknKbvklhvEnKoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="releaseNoteButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAdFJREFUaEPt
         mbtKA1EQhqOFWIvYaGUl2PgIKoKVnS/ipREEL5XPICJeCkWIKRUkpBIE9RG0FLHQykohfpMzQaLZZJOc

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Comma
 {
-    public partial class releaseNote : UserControl
+    public partial class license : UserControl
     {
-        public releaseNote()
+        public license()
         {
             InitializeComponent();
-        }
-
-        private void githubText_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/gloomn/Comma");
         }
     }
 }

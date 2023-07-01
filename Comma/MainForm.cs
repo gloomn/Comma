@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using WK.Libraries.BetterFolderBrowserNS;
 
@@ -40,6 +41,10 @@ namespace Comma
             comma = this;
             t.Abort();
             treeView.ImageList = imageList;
+            releaseNote1.Hide();
+            information1.Hide();
+            license1.Hide();
+            treeView.Show();
         }
 
         public void startSplashScreen()
@@ -148,7 +153,7 @@ namespace Comma
             // 현재 버튼 상태를 저장한다
             foreach (Control control in Comma.comma.languageList.Controls)
             {
-                if (control is Button button)
+                if (control is System.Windows.Forms.Button button)
                 {
                     buttonControl.ButtonData buttonData = new buttonControl.ButtonData(button.Name, button.Top, button.BackColor == System.Drawing.Color.Blue);
                     buttonDataList.Add(buttonData);
@@ -208,6 +213,8 @@ namespace Comma
                     Console.WriteLine("button_data.txt 파일이 삭제되었습니다.");
                     Console.WriteLine(filePath);
                 }
+                languageList.Controls.Clear();
+                treeView.Nodes.Clear();
             }
             else
             {
@@ -242,5 +249,35 @@ namespace Comma
             TextRenderer.DrawText(e.Graphics, e.Node.Text, e.Node.NodeFont, e.Bounds, e.Node.ForeColor, TextFormatFlags.VerticalCenter);
         }
 
+        private void releaseNoteButton_Click(object sender, EventArgs e)
+        {
+            releaseNote1.Show();
+            treeView.Hide();
+            information1.Hide();
+        }
+
+        private void directoryButton_Click(object sender, EventArgs e)
+        {
+            treeView.Show();
+            releaseNote1.Hide();
+            information1.Hide();
+            license1.Hide();
+        }
+
+        private void informationButton_Click(object sender, EventArgs e)
+        {
+            information1.Show();
+            releaseNote1.Hide();
+            treeView.Hide();
+            license1.Hide();
+        }
+
+        private void licenseButton_Click(object sender, EventArgs e)
+        {
+            license1.Show();
+            information1.Hide();
+            releaseNote1.Hide();
+            treeView.Hide();
+        }
     }
 }

@@ -167,6 +167,7 @@ namespace Comma
 
                     // 하위 디렉토리의 노드를 생성한다.
                     TreeNode subdirectoryNode = new TreeNode(directoryName);
+                    subdirectoryNode.Tag = subdirectory; // 디렉토리 경로를 Tag 속성에 저장한다.
                     parentNode.Nodes.Add(subdirectoryNode);
 
                     // 하위 디렉토리의 하위 디렉토리들과 파일들을 재귀적으로 추가한다.
@@ -187,11 +188,15 @@ namespace Comma
                 // 루트 노드 생성
                 string rootDirectoryName = Path.GetFileName(directoryPath);
                 TreeNode rootNode = new TreeNode(rootDirectoryName);
+                rootNode.Tag = directoryPath; // 디렉토리 경로를 루트 노드의 Tag 속성에 저장
                 Comma.comma.treeView.Nodes.Add(rootNode);
 
                 // 디렉토리의 하위 디렉토리와 파일들을 추가
                 AddSubdirectoriesToNode(rootNode, directoryPath);
                 AddFilesToNode(rootNode, directoryPath);
+
+                // 우클릭 이벤트 핸들러 등록
+                Comma.comma.treeView.NodeMouseClick += treeView_NodeMouseClick;
             }
             catch (Exception ex)
             {
@@ -199,6 +204,8 @@ namespace Comma
             }
         }
 
+
+        
 
         private void AddFilesToNode(TreeNode parentNode, string directoryPath)
         {
@@ -214,6 +221,7 @@ namespace Comma
 
                     // 파일의 노드를 생성한다.
                     TreeNode fileNode = new TreeNode(fileName);
+                    fileNode.Tag = file; // 파일 경로를 Tag 속성에 저장한다.
                     fileNode.ImageIndex = 1; // 이미지 인덱스 설정
                     fileNode.SelectedImageIndex = 1; // 선택된 이미지 인덱스 설정
                     parentNode.Nodes.Add(fileNode);
@@ -408,6 +416,22 @@ namespace Comma
             // 버튼의 선택 상태를 설정한다.
             // 버튼 정보는 버튼의 Tag 속성을 통해 저장하도록 한다.
             button.Tag = isSelected;
+        }
+
+        private void treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                // 우클릭한 노드를 선택한다.
+                Comma.comma.treeView.SelectedNode = e.Node;
+
+                // 폴더 경로를 복사한다.
+                string nodePath = e.Node.Tag as string;
+                if (!string.IsNullOrEmpty(nodePath))
+                {
+                    Clipboard.SetText(nodePath);
+                }
+            }
         }
     }
 }

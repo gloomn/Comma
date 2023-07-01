@@ -33,31 +33,33 @@ namespace Comma
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Comma));
             this.navBar = new System.Windows.Forms.Panel();
-            this.navBarMainTitle = new System.Windows.Forms.Label();
-            this.sideBar = new System.Windows.Forms.Panel();
-            this.languageList = new System.Windows.Forms.Panel();
-            this.directoryList = new System.Windows.Forms.Panel();
-            this.treeView = new System.Windows.Forms.TreeView();
-            this.bottomBar = new System.Windows.Forms.Panel();
-            this.progressBar = new MaterialSkin.Controls.MaterialProgressBar();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.resetDatabase = new System.Windows.Forms.Button();
-            this.addFolders = new System.Windows.Forms.Button();
+            this.cc = new System.Windows.Forms.Label();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.navBarMainTitle = new System.Windows.Forms.Label();
             this.maximizeButton = new System.Windows.Forms.Button();
             this.restoreButton = new System.Windows.Forms.Button();
-            this.cc = new System.Windows.Forms.Label();
+            this.sideBar = new System.Windows.Forms.Panel();
+            this.directoryButton = new System.Windows.Forms.Button();
+            this.informationButton = new System.Windows.Forms.Button();
+            this.licenseButton = new System.Windows.Forms.Button();
+            this.releaseNoteButton = new System.Windows.Forms.Button();
+            this.resetDatabase = new System.Windows.Forms.Button();
+            this.addFolders = new System.Windows.Forms.Button();
+            this.languageList = new System.Windows.Forms.Panel();
+            this.directoryList = new System.Windows.Forms.Panel();
+            this.license1 = new license();
+            this.information1 = new information();
+            this.releaseNote1 = new releaseNote();
+            this.treeView = new System.Windows.Forms.TreeView();
+            this.bottomBar = new System.Windows.Forms.Panel();
+            this.progressBar = new MaterialSkin.Controls.MaterialProgressBar();
             this.navBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideBar.SuspendLayout();
             this.directoryList.SuspendLayout();
             this.bottomBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // navBar
@@ -79,184 +81,17 @@ namespace Comma
             this.navBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainForm_MouseMove);
             this.navBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mainForm_MouseUp);
             // 
-            // navBarMainTitle
+            // cc
             // 
-            this.navBarMainTitle.AutoSize = true;
-            this.navBarMainTitle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.navBarMainTitle.ForeColor = System.Drawing.Color.White;
-            this.navBarMainTitle.Location = new System.Drawing.Point(26, 6);
-            this.navBarMainTitle.Name = "navBarMainTitle";
-            this.navBarMainTitle.Size = new System.Drawing.Size(192, 18);
-            this.navBarMainTitle.TabIndex = 0;
-            this.navBarMainTitle.Text = "Comma (Version: Beta 1.0)";
-            // 
-            // sideBar
-            // 
-            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.sideBar.Controls.Add(this.button5);
-            this.sideBar.Controls.Add(this.button4);
-            this.sideBar.Controls.Add(this.button3);
-            this.sideBar.Controls.Add(this.button2);
-            this.sideBar.Controls.Add(this.button1);
-            this.sideBar.Controls.Add(this.resetDatabase);
-            this.sideBar.Controls.Add(this.addFolders);
-            this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBar.Location = new System.Drawing.Point(0, 30);
-            this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(70, 690);
-            this.sideBar.TabIndex = 1;
-            // 
-            // languageList
-            // 
-            this.languageList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.languageList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.languageList.Location = new System.Drawing.Point(70, 30);
-            this.languageList.Name = "languageList";
-            this.languageList.Size = new System.Drawing.Size(170, 690);
-            this.languageList.TabIndex = 2;
-            // 
-            // directoryList
-            // 
-            this.directoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
-            this.directoryList.Controls.Add(this.treeView);
-            this.directoryList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.directoryList.Location = new System.Drawing.Point(240, 30);
-            this.directoryList.Name = "directoryList";
-            this.directoryList.Size = new System.Drawing.Size(1040, 685);
-            this.directoryList.TabIndex = 4;
-            // 
-            // treeView
-            // 
-            this.treeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.treeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeView.ForeColor = System.Drawing.Color.White;
-            this.treeView.Location = new System.Drawing.Point(0, 0);
-            this.treeView.Name = "treeView";
-            this.treeView.ShowLines = false;
-            this.treeView.ShowPlusMinus = false;
-            this.treeView.ShowRootLines = false;
-            this.treeView.Size = new System.Drawing.Size(1040, 685);
-            this.treeView.TabIndex = 0;
-            this.treeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView_DrawNode);
-            // 
-            // bottomBar
-            // 
-            this.bottomBar.Controls.Add(this.progressBar);
-            this.bottomBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomBar.Location = new System.Drawing.Point(240, 715);
-            this.bottomBar.Name = "bottomBar";
-            this.bottomBar.Size = new System.Drawing.Size(1040, 5);
-            this.bottomBar.TabIndex = 3;
-            // 
-            // progressBar
-            // 
-            this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
-            this.progressBar.Depth = 0;
-            this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar.Location = new System.Drawing.Point(0, 0);
-            this.progressBar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(1040, 5);
-            this.progressBar.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(9, 637);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 9;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(9, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 8;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(9, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(9, 255);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(9, 122);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // resetDatabase
-            // 
-            this.resetDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.resetDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.resetDatabase.FlatAppearance.BorderSize = 0;
-            this.resetDatabase.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.resetDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetDatabase.Image = ((System.Drawing.Image)(resources.GetObject("resetDatabase.Image")));
-            this.resetDatabase.Location = new System.Drawing.Point(9, 581);
-            this.resetDatabase.Name = "resetDatabase";
-            this.resetDatabase.Size = new System.Drawing.Size(50, 50);
-            this.resetDatabase.TabIndex = 4;
-            this.resetDatabase.UseVisualStyleBackColor = true;
-            this.resetDatabase.Click += new System.EventHandler(this.resetDatabase_Click);
-            // 
-            // addFolders
-            // 
-            this.addFolders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addFolders.FlatAppearance.BorderSize = 0;
-            this.addFolders.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.addFolders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addFolders.Image = ((System.Drawing.Image)(resources.GetObject("addFolders.Image")));
-            this.addFolders.Location = new System.Drawing.Point(9, 2);
-            this.addFolders.Name = "addFolders";
-            this.addFolders.Size = new System.Drawing.Size(50, 50);
-            this.addFolders.TabIndex = 3;
-            this.addFolders.UseVisualStyleBackColor = true;
-            this.addFolders.Click += new System.EventHandler(this.addFolders_Click);
+            this.cc.AutoSize = true;
+            this.cc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.cc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cc.ForeColor = System.Drawing.Color.White;
+            this.cc.Location = new System.Drawing.Point(214, 9);
+            this.cc.Name = "cc";
+            this.cc.Size = new System.Drawing.Size(95, 15);
+            this.cc.TabIndex = 6;
+            this.cc.Text = "© Gloomn 2023";
             // 
             // minimizeButton
             // 
@@ -296,6 +131,17 @@ namespace Comma
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // navBarMainTitle
+            // 
+            this.navBarMainTitle.AutoSize = true;
+            this.navBarMainTitle.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navBarMainTitle.ForeColor = System.Drawing.Color.White;
+            this.navBarMainTitle.Location = new System.Drawing.Point(26, 6);
+            this.navBarMainTitle.Name = "navBarMainTitle";
+            this.navBarMainTitle.Size = new System.Drawing.Size(192, 18);
+            this.navBarMainTitle.TabIndex = 0;
+            this.navBarMainTitle.Text = "Comma (Version: Beta 1.0)";
+            // 
             // maximizeButton
             // 
             this.maximizeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -324,17 +170,192 @@ namespace Comma
             this.restoreButton.UseVisualStyleBackColor = true;
             this.restoreButton.Click += new System.EventHandler(this.restoreButton_Click);
             // 
-            // cc
+            // sideBar
             // 
-            this.cc.AutoSize = true;
-            this.cc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
-            this.cc.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cc.ForeColor = System.Drawing.Color.White;
-            this.cc.Location = new System.Drawing.Point(214, 9);
-            this.cc.Name = "cc";
-            this.cc.Size = new System.Drawing.Size(95, 15);
-            this.cc.TabIndex = 6;
-            this.cc.Text = "© Gloomn 2023";
+            this.sideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.sideBar.Controls.Add(this.directoryButton);
+            this.sideBar.Controls.Add(this.informationButton);
+            this.sideBar.Controls.Add(this.licenseButton);
+            this.sideBar.Controls.Add(this.releaseNoteButton);
+            this.sideBar.Controls.Add(this.resetDatabase);
+            this.sideBar.Controls.Add(this.addFolders);
+            this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBar.Location = new System.Drawing.Point(0, 30);
+            this.sideBar.Name = "sideBar";
+            this.sideBar.Size = new System.Drawing.Size(70, 690);
+            this.sideBar.TabIndex = 1;
+            // 
+            // directoryButton
+            // 
+            this.directoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.directoryButton.FlatAppearance.BorderSize = 0;
+            this.directoryButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.directoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.directoryButton.Image = ((System.Drawing.Image)(resources.GetObject("directoryButton.Image")));
+            this.directoryButton.Location = new System.Drawing.Point(9, 55);
+            this.directoryButton.Name = "directoryButton";
+            this.directoryButton.Size = new System.Drawing.Size(50, 50);
+            this.directoryButton.TabIndex = 8;
+            this.directoryButton.UseVisualStyleBackColor = true;
+            this.directoryButton.Click += new System.EventHandler(this.directoryButton_Click);
+            // 
+            // informationButton
+            // 
+            this.informationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.informationButton.FlatAppearance.BorderSize = 0;
+            this.informationButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.informationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationButton.Image = ((System.Drawing.Image)(resources.GetObject("informationButton.Image")));
+            this.informationButton.Location = new System.Drawing.Point(9, 188);
+            this.informationButton.Name = "informationButton";
+            this.informationButton.Size = new System.Drawing.Size(50, 50);
+            this.informationButton.TabIndex = 7;
+            this.informationButton.UseVisualStyleBackColor = true;
+            this.informationButton.Click += new System.EventHandler(this.informationButton_Click);
+            // 
+            // licenseButton
+            // 
+            this.licenseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.licenseButton.FlatAppearance.BorderSize = 0;
+            this.licenseButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.licenseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.licenseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.licenseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.licenseButton.Image = ((System.Drawing.Image)(resources.GetObject("licenseButton.Image")));
+            this.licenseButton.Location = new System.Drawing.Point(9, 255);
+            this.licenseButton.Name = "licenseButton";
+            this.licenseButton.Size = new System.Drawing.Size(50, 50);
+            this.licenseButton.TabIndex = 6;
+            this.licenseButton.UseVisualStyleBackColor = true;
+            this.licenseButton.Click += new System.EventHandler(this.licenseButton_Click);
+            // 
+            // releaseNoteButton
+            // 
+            this.releaseNoteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.releaseNoteButton.FlatAppearance.BorderSize = 0;
+            this.releaseNoteButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.releaseNoteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.releaseNoteButton.Image = ((System.Drawing.Image)(resources.GetObject("releaseNoteButton.Image")));
+            this.releaseNoteButton.Location = new System.Drawing.Point(9, 122);
+            this.releaseNoteButton.Name = "releaseNoteButton";
+            this.releaseNoteButton.Size = new System.Drawing.Size(50, 50);
+            this.releaseNoteButton.TabIndex = 5;
+            this.releaseNoteButton.UseVisualStyleBackColor = true;
+            this.releaseNoteButton.Click += new System.EventHandler(this.releaseNoteButton_Click);
+            // 
+            // resetDatabase
+            // 
+            this.resetDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.resetDatabase.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetDatabase.FlatAppearance.BorderSize = 0;
+            this.resetDatabase.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.resetDatabase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetDatabase.Image = ((System.Drawing.Image)(resources.GetObject("resetDatabase.Image")));
+            this.resetDatabase.Location = new System.Drawing.Point(9, 628);
+            this.resetDatabase.Name = "resetDatabase";
+            this.resetDatabase.Size = new System.Drawing.Size(50, 50);
+            this.resetDatabase.TabIndex = 4;
+            this.resetDatabase.UseVisualStyleBackColor = true;
+            this.resetDatabase.Click += new System.EventHandler(this.resetDatabase_Click);
+            // 
+            // addFolders
+            // 
+            this.addFolders.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addFolders.FlatAppearance.BorderSize = 0;
+            this.addFolders.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.addFolders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addFolders.Image = ((System.Drawing.Image)(resources.GetObject("addFolders.Image")));
+            this.addFolders.Location = new System.Drawing.Point(9, 2);
+            this.addFolders.Name = "addFolders";
+            this.addFolders.Size = new System.Drawing.Size(50, 50);
+            this.addFolders.TabIndex = 3;
+            this.addFolders.UseVisualStyleBackColor = true;
+            this.addFolders.Click += new System.EventHandler(this.addFolders_Click);
+            // 
+            // languageList
+            // 
+            this.languageList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.languageList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.languageList.Location = new System.Drawing.Point(70, 30);
+            this.languageList.Name = "languageList";
+            this.languageList.Size = new System.Drawing.Size(170, 690);
+            this.languageList.TabIndex = 2;
+            // 
+            // directoryList
+            // 
+            this.directoryList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(225)))), ((int)(((byte)(232)))));
+            this.directoryList.Controls.Add(this.license1);
+            this.directoryList.Controls.Add(this.information1);
+            this.directoryList.Controls.Add(this.releaseNote1);
+            this.directoryList.Controls.Add(this.treeView);
+            this.directoryList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.directoryList.Location = new System.Drawing.Point(240, 30);
+            this.directoryList.Name = "directoryList";
+            this.directoryList.Size = new System.Drawing.Size(1040, 685);
+            this.directoryList.TabIndex = 4;
+            // 
+            // license1
+            // 
+            this.license1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.license1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.license1.Location = new System.Drawing.Point(0, 0);
+            this.license1.Name = "license1";
+            this.license1.Size = new System.Drawing.Size(1040, 685);
+            this.license1.TabIndex = 3;
+            // 
+            // information1
+            // 
+            this.information1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.information1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.information1.Location = new System.Drawing.Point(0, 0);
+            this.information1.Name = "information1";
+            this.information1.Size = new System.Drawing.Size(1040, 685);
+            this.information1.TabIndex = 2;
+            // 
+            // releaseNote1
+            // 
+            this.releaseNote1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.releaseNote1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.releaseNote1.Location = new System.Drawing.Point(0, 0);
+            this.releaseNote1.Name = "releaseNote1";
+            this.releaseNote1.Size = new System.Drawing.Size(1040, 685);
+            this.releaseNote1.TabIndex = 1;
+            // 
+            // treeView
+            // 
+            this.treeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.treeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treeView.ForeColor = System.Drawing.Color.White;
+            this.treeView.Location = new System.Drawing.Point(0, 0);
+            this.treeView.Name = "treeView";
+            this.treeView.ShowLines = false;
+            this.treeView.ShowPlusMinus = false;
+            this.treeView.ShowRootLines = false;
+            this.treeView.Size = new System.Drawing.Size(1040, 685);
+            this.treeView.TabIndex = 0;
+            this.treeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.treeView_DrawNode);
+            // 
+            // bottomBar
+            // 
+            this.bottomBar.Controls.Add(this.progressBar);
+            this.bottomBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomBar.Location = new System.Drawing.Point(240, 715);
+            this.bottomBar.Name = "bottomBar";
+            this.bottomBar.Size = new System.Drawing.Size(1040, 5);
+            this.bottomBar.TabIndex = 3;
+            // 
+            // progressBar
+            // 
+            this.progressBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(60)))));
+            this.progressBar.Depth = 0;
+            this.progressBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBar.Location = new System.Drawing.Point(0, 0);
+            this.progressBar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(1040, 5);
+            this.progressBar.TabIndex = 0;
             // 
             // Comma
             // 
@@ -355,10 +376,10 @@ namespace Comma
             this.Load += new System.EventHandler(this.Comma_Load);
             this.navBar.ResumeLayout(false);
             this.navBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sideBar.ResumeLayout(false);
             this.directoryList.ResumeLayout(false);
             this.bottomBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,11 +395,10 @@ namespace Comma
         private System.Windows.Forms.Button minimizeButton;
         private System.Windows.Forms.Button addFolders;
         private System.Windows.Forms.Button resetDatabase;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button directoryButton;
+        private System.Windows.Forms.Button informationButton;
+        private System.Windows.Forms.Button licenseButton;
+        private System.Windows.Forms.Button releaseNoteButton;
         public System.Windows.Forms.Panel languageList;
         private System.Windows.Forms.Button maximizeButton;
         private System.Windows.Forms.Button restoreButton;
@@ -386,6 +406,9 @@ namespace Comma
         public System.Windows.Forms.TreeView treeView;
         public MaterialSkin.Controls.MaterialProgressBar progressBar;
         private System.Windows.Forms.Label cc;
+        private releaseNote releaseNote1;
+        private information information1;
+        private license license1;
     }
 }
 

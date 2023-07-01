@@ -250,6 +250,18 @@
   <ItemGroup>
     <Compile Include="buttonControl.cs" />
     <Compile Include="database.cs" />
+    <Compile Include="information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="information.Designer.cs">
+      <DependentUpon>information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="license.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="license.Designer.cs">
+      <DependentUpon>license.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +283,12 @@
     <Compile Include="splashScreen.Designer.cs">
       <DependentUpon>splashScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="information.resx">
+      <DependentUpon>information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="license.resx">
+      <DependentUpon>license.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
