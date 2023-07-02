@@ -10,6 +10,9 @@
 ---
 ### 소개(Introduce)
 * [**CSharp**] 기반의 프로젝트 폴더 관리 프로그램입니다.
+* 현재는 Beta 버전으로 Windows Forms로 개발되었습니다.
+* 정식 Release 버전은 Windows WPF로 개발될 예정입니다.
+* Release Version will be developed with Windows WPF
 ![image](https://github.com/gloomn/Comma/assets/86612194/9d9ac0df-f6e7-4e5b-8ed6-e74b04b61977)
 
 
