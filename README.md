@@ -10,7 +10,8 @@
 ---
 ### 소개
 * [**CSharp**] 기반의 프로젝트 폴더 관리 프로그램입니다.
-* 가장 첫 번째 버전입니다.
+![image](https://github.com/gloomn/Comma/assets/86612194/9d9ac0df-f6e7-4e5b-8ed6-e74b04b61977)
+
 
 ---
 ### 요구 사항
