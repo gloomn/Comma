@@ -61,5 +61,5 @@
 ---
 ### 이메일
 * ithan0704@naver.com
-
+개발일지(아직 완성 안함) - > https://omniscient-pulsar-048.notion.site/COMMA-Source-Code-Manager-483d14dc94df4026a7b61eba911bd2c9?pvs=4
 
