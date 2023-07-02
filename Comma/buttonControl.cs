@@ -102,54 +102,60 @@ namespace Comma
             // 데이터베이스에서 해당 언어의 maindirectorypath 폴더들을 가져온다.
             List<string> directoryPaths = GetDirectoryPathsFromDatabase(languageName);
 
-            // ProgressBar 초기화 및 설정
-            Comma.comma.progressBar.Minimum = 0;
-            Comma.comma.progressBar.Maximum = directoryPaths.Count;
-            Comma.comma.progressBar.Value = 0;
-            Comma.comma.progressBar.Visible = true;
-
-            // directoryList 패널의 TreeView를 초기화한다.
-            Comma.comma.treeView.Nodes.Clear();
-
-            // 가져온 폴더 경로들을 TreeView에 추가한다.
-            foreach (string directoryPath in directoryPaths)
+            if(directoryPaths.Count > 0)
             {
-                PopulateTreeView(directoryPath);
+                Comma.comma.progressBar.Minimum = 0;
+                Comma.comma.progressBar.Maximum = directoryPaths.Count;
+                Comma.comma.progressBar.Value = 0;
+                Comma.comma.progressBar.Visible = true;
 
-                // ProgressBar 값 업데이트
-                Comma.comma.progressBar.Value++;
-                Comma.comma.progressBar.Refresh();
-            }
-            // ProgressBar 초기화
-            Comma.comma.progressBar.Value = 0;
-            Comma.comma.progressBar.Maximum = 0;
+                // directoryList 패널의 TreeView를 초기화한다.
+                Comma.comma.treeView.Nodes.Clear();
 
-            // 선택된 버튼의 배경색과 선택 상태를 변경
-            List<Button> buttons = Comma.comma.languageList.Controls.OfType<Button>().ToList();
-
-            foreach (Button button in buttons)
-            {
-                if (button == clickedButton)
+                // 가져온 폴더 경로들을 TreeView에 추가한다.
+                foreach (string directoryPath in directoryPaths)
                 {
-                    button.BackColor = System.Drawing.Color.FromArgb(40, 44, 55);
-                    button.ForeColor = System.Drawing.Color.White;
-                    SetButtonSelectedStatus(button, true);
-                }
-                else
-                {
-                    button.BackColor = System.Drawing.Color.Transparent;
-                    button.ForeColor = System.Drawing.Color.White;
-                    SetButtonSelectedStatus(button, false);
-                }
-            }
+                    PopulateTreeView(directoryPath);
 
-            // 버튼 정보 저장
-            List<ButtonData> buttonDataList = LoadButtonData();
-            foreach (ButtonData buttonData in buttonDataList)
-            {
-                buttonData.IsSelected = (buttonData.Name == clickedButton.Name);
+                    // ProgressBar 값 업데이트
+                    Comma.comma.progressBar.Value++;
+                    Comma.comma.progressBar.Refresh();
+                }
+                // ProgressBar 초기화
+                Comma.comma.progressBar.Value = 0;
+
+                // 선택된 버튼의 배경색과 선택 상태를 변경
+                List<Button> buttons = Comma.comma.languageList.Controls.OfType<Button>().ToList();
+
+                foreach (Button button in buttons)
+                {
+                    if (button == clickedButton)
+                    {
+                        button.BackColor = System.Drawing.Color.FromArgb(40, 44, 55);
+                        button.ForeColor = System.Drawing.Color.White;
+                        SetButtonSelectedStatus(button, true);
+                    }
+                    else
+                    {
+                        button.BackColor = System.Drawing.Color.Transparent;
+                        button.ForeColor = System.Drawing.Color.White;
+                        SetButtonSelectedStatus(button, false);
+                    }
+                }
+
+                // 버튼 정보 저장
+                List<ButtonData> buttonDataList = LoadButtonData();
+                foreach (ButtonData buttonData in buttonDataList)
+                {
+                    buttonData.IsSelected = (buttonData.Name == clickedButton.Name);
+                }
+                SaveButtonData(buttonDataList);
             }
-            SaveButtonData(buttonDataList);
+            else
+            {
+                Comma.comma.progressBar.Maximum = 0;
+            }
+           
         }
 
 
