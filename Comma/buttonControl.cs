@@ -122,6 +122,7 @@ namespace Comma
             }
             // ProgressBar 초기화
             Comma.comma.progressBar.Value = 0;
+            Comma.comma.progressBar.Maximum = 0;
 
             // 선택된 버튼의 배경색과 선택 상태를 변경
             List<Button> buttons = Comma.comma.languageList.Controls.OfType<Button>().ToList();
