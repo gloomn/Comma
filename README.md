@@ -6,7 +6,7 @@
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) 
 ![Licence](https://img.shields.io/github/license/gloomn/Comma?style=for-the-badge)
 
-
+‼️버그가 있네요.. 다른 언어로 새로 개발하려고요..
 ---
 ### 소개(Introduce)
 * [**CSharp**] 기반의 프로젝트 폴더 관리 프로그램입니다.
