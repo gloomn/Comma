@@ -7,6 +7,7 @@
 ![Licence](https://img.shields.io/github/license/gloomn/Comma?style=for-the-badge)
 
 ‼️버그가 있네요.. 다른 언어로 새로 개발하려고요..
+repository 중에 sequence라는 이름으로 개발중입니다! 고3이라 언제 완료될지는 모르고 토니 프로젝트라 그냥 재밌게 봐주십쇼
 ---
 ### 소개(Introduce)
 * [**CSharp**] 기반의 프로젝트 폴더 관리 프로그램입니다.
